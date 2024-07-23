@@ -6,14 +6,12 @@ import (
 	vidio "github.com/AlexEidt/Vidio"
 	"image"
 	"image/color"
-	//"image/jpeg"
 	"strings"
 )
 
 const (
 	LENASCII            = uint16(len(ASCIILIST) - 1)
 	MAXGRAYCOLOR uint16 = 65535
-	//QUALITY = 100
 )
 
 var ASCIILIST = [...]rune{':',':','0','0'} 
@@ -74,7 +72,7 @@ func graySacaleImage(img image.Image) image.Gray16 {
 }
 
 func main(){
-	video, erro := vidio.NewVideo("badApple.mp4")
+	video, erro := vidio.NewVideo("video.mp4")
 
 	if erro != nil{
 		fmt.Println(erro)
